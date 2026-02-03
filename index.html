@@ -1,92 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>IT 4403 Student Website</title>
+<meta charset="UTF-8">
+<title>IT 4403 Student Website</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #000000;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f7f6;
+        color: #000;
+    }
 
-        header {
-            background-color: #003366;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+    header {
+        background-color: #ffffff;
+        text-align: center;
+        padding: 40px 20px;
+        border-bottom: 3px solid #1aa39a;
+    }
 
-        nav {
-            background-color: #e6e6e6;
-            padding: 10px;
-            text-align: center;
-        }
+    header h1 {
+        margin: 0;
+        color: #0a6f69;
+        font-size: 36px;
+    }
 
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #003366;
-            font-weight: bold;
-        }
+    header p {
+        margin: 8px 0;
+        font-weight: bold;
+    }
 
-        main {
-            padding: 30px;
-            max-width: 800px;
-            margin: auto;
-            background-color: white;
-        }
+    nav {
+        background-color: #ffffff;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #ccc;
+    }
 
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-        }
+    nav a {
+        margin: 0 20px;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+    }
 
-        footer a {
-            color: white;
-            text-decoration: underline;
-        }
-    </style>
+    main {
+        max-width: 1100px;
+        margin: 40px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        border-top: 5px solid #1aa39a;
+    }
+
+    .card h2 {
+        margin-top: 0;
+        color: #0a6f69;
+    }
+
+    footer {
+        text-align: center;
+        padding: 25px;
+        background-color: #ffffff;
+        border-top: 1px solid #ccc;
+    }
+
+    footer a {
+        color: #0a6f69;
+        text-decoration: none;
+        font-weight: bold;
+    }
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Tu Nombre</h1>
+    <h1>Beatriz Barios</h1>
+    <p>Kennesaw State University – Student</p>
     <p>IT 4403 – Advanced Web and Mobile Applications</p>
 </header>
 
 <nav>
     <a href="#">Home</a>
     <a href="#">Exercises</a>
+    <a href="#">Projects</a>
     <a href="#">Labs</a>
-    <a href="#">Project</a>
 </nav>
 
 <main>
-    <p>
-        This website is used to publish exercises and projects for the course
-        <strong>IT 4403 – Advanced Web and Mobile Applications</strong>.
-    </p>
+    <div class="card">
+        <h2>About This Website</h2>
+        <p>
+            The purpose of this website is to store all exercises, labs, and projects
+            completed for the IT 4403 course in one organized location.
+        </p>
+    </div>
 
-    <p>
-        <strong>Disclaimer:</strong> This is a student website created for course projects in IT 4403.
-    </p>
+    <div class="card">
+        <h2>Course Information</h2>
+        <p><strong>Course:</strong> IT 4403 – Advanced Web and Mobile Applications</p>
+        <p><strong>University:</strong> Kennesaw State University</p>
+    </div>
+
+    <div class="card">
+        <h2>Disclaimer</h2>
+        <p>
+            This is a student website created for course projects in IT 4403.
+            All content is for educational purposes only.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Helpful Links</h2>
+        <p>
+            <a href="https://www.ccse.kennesaw.edu/it/" target="_blank">
+                CCSE Department of IT Website
+            </a>
+        </p>
+    </div>
 </main>
 
 <footer>
-    <p>
-        <a href="https://www.ccse.kennesaw.edu/it/" target="_blank">
-            CCSE Department of IT Website
-        </a>
-    </p>
+    <p>&copy; 2026 – IT 4403 Student Website</p>
 </footer>
 
 </body>
 </html>
+
 
