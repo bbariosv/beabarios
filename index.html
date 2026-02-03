@@ -8,7 +8,7 @@
     body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
-        background-color: #f2f2f2;
+        background-color: #eaeaea;
         color: #111;
     }
 
@@ -20,44 +20,49 @@
     /* LEFT SIDE */
     .left {
         width: 35%;
-        background-color: #0b1c2d; /* navy */
-        color: #ffffff;
-        padding: 40px 30px;
+        background-color: #2f4f73; /* lighter navy blue */
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* vertical center */
+        padding: 40px;
     }
 
     .left h1 {
-        margin-top: 0;
-        font-size: 34px;
-        color: #ffffff;
+        font-size: 36px;
+        margin-bottom: 15px;
     }
 
     .left p {
         font-size: 15px;
-        color: #d0d0d0;
+        color: #e0e0e0;
         line-height: 1.6;
+        max-width: 300px;
     }
 
     /* RIGHT SIDE */
     .right {
         width: 65%;
-        padding: 40px 50px;
-        background-color: #ffffff;
+        padding: 40px;
+        background-color: #f7f7f7;
     }
 
-    .section {
-        margin-bottom: 40px;
+    .card {
+        background-color: white;
+        padding: 20px 25px;
+        margin-bottom: 25px;
+        border-left: 6px solid #2f4f73;
     }
 
-    .section h2 {
+    .card h2 {
+        margin-top: 0;
+        color: #2f4f73;
         margin-bottom: 10px;
-        color: #0b1c2d;
-        border-bottom: 2px solid #ccc;
-        padding-bottom: 5px;
     }
 
     ul {
-        margin-top: 10px;
         padding-left: 20px;
+        margin: 0;
     }
 
     ul li {
@@ -65,7 +70,7 @@
     }
 
     a {
-        color: #0b1c2d;
+        color: #2f4f73;
         text-decoration: none;
         font-weight: bold;
     }
@@ -75,7 +80,7 @@
     }
 
     .footer {
-        margin-top: 60px;
+        margin-top: 40px;
         font-size: 13px;
         color: #555;
     }
@@ -91,64 +96,62 @@
         <h1>Beatriz Barios</h1>
         <p>
             Student at Kennesaw State University<br>
-            CCSE – Department of Information Technology
+            IT 4403 – Advanced Web and Mobile Applications
         </p>
-
         <p>
-            This website serves as a workspace for the IT 4403 course. It will be
-            updated throughout the semester with exercises, labs, and project
-            submissions related to advanced web and mobile application development.
+            This website will be used to publish exercises, labs, and project work
+            completed throughout the semester.
         </p>
     </div>
 
     <!-- RIGHT COLUMN -->
     <div class="right">
 
-        <div class="section">
+        <div class="card">
             <h2>Course Information</h2>
             <p>
-                <strong>Course:</strong> IT 4403 – Advanced Web and Mobile Applications<br>
+                <strong>Course:</strong> IT 4403<br>
                 <strong>University:</strong> Kennesaw State University
             </p>
         </div>
 
-        <div class="section">
+        <div class="card">
             <h2>Exercises</h2>
             <ul>
-                <li>Python and exploratory computing exercises</li>
-                <li>Web development practice assignments</li>
+                <li>Exploratory computing with Python</li>
+                <li>Web development practice</li>
             </ul>
         </div>
 
-        <div class="section">
+        <div class="card">
             <h2>Labs</h2>
             <ul>
-                <li>Hosting and deployment labs</li>
-                <li>Client-side and server-side development labs</li>
+                <li>Web hosting and deployment</li>
+                <li>Client-side and server-side labs</li>
             </ul>
         </div>
 
-        <div class="section">
+        <div class="card">
             <h2>Projects</h2>
             <ul>
-                <li>Semester-long web application project</li>
+                <li>Semester web application project</li>
                 <li>Final course project</li>
             </ul>
         </div>
 
-        <div class="section">
+        <div class="card">
             <h2>Disclaimer</h2>
             <p>
-                This is a student-created website for academic use only.
-                All content is part of coursework for IT 4403.
+                This website was created for academic purposes only as part of the
+                IT 4403 course.
             </p>
         </div>
 
-        <div class="section">
+        <div class="card">
             <h2>Useful Link</h2>
             <p>
                 <a href="https://www.ccse.kennesaw.edu/it/" target="_blank">
-                    CCSE Department of IT
+                    CCSE Department of Information Technology
                 </a>
             </p>
         </div>
