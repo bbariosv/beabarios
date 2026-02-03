@@ -7,82 +7,83 @@
 <style>
     body {
         margin: 0;
-        font-family: "Segoe UI", Tahoma, sans-serif;
-        background-color: #eef2f5;
-        color: #222;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f6f8;
+        color: #1f1f1f;
+        line-height: 1.6;
     }
 
-    header {
-        background-color: #ffffff;
-        padding: 50px 20px;
-        text-align: center;
-        border-bottom: 4px solid #2c6bed;
+    /* Top bar */
+    .top-bar {
+        background-color: #1f3c88;
+        color: white;
+        padding: 12px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    header h1 {
-        margin: 0;
-        font-size: 38px;
-        color: #2c6bed;
-    }
-
-    header p {
-        margin: 6px 0;
+    .top-bar strong {
         font-size: 16px;
-        font-weight: 600;
     }
 
-    nav {
-        background-color: #f9fafb;
-        text-align: center;
-        padding: 14px 0;
-        border-bottom: 1px solid #ccc;
-    }
-
-    nav a {
-        margin: 0 18px;
+    .top-bar nav a {
+        color: white;
+        margin-left: 20px;
         text-decoration: none;
-        color: #222;
-        font-weight: bold;
-        font-size: 15px;
+        font-size: 14px;
     }
 
-    nav a:hover {
-        color: #2c6bed;
+    .top-bar nav a:hover {
+        text-decoration: underline;
     }
 
-    main {
-        max-width: 1200px;
-        margin: 45px auto;
-        padding: 0 20px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 28px;
-    }
-
-    .box {
+    /* Hero section */
+    .hero {
         background-color: #ffffff;
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-        border-left: 6px solid #2c6bed;
+        padding: 60px 30px;
+        border-bottom: 3px solid #1f3c88;
     }
 
-    .box h2 {
-        margin-top: 0;
-        color: #2c6bed;
-        font-size: 22px;
+    .hero h1 {
+        margin: 0;
+        font-size: 40px;
+        color: #1f3c88;
+    }
+
+    .hero p {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    /* Section style */
+    section {
+        padding: 45px 30px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    section h2 {
+        color: #1f3c88;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 8px;
+        margin-bottom: 18px;
+    }
+
+    .alt {
+        background-color: #ffffff;
     }
 
     footer {
-        background-color: #ffffff;
+        background-color: #1f3c88;
+        color: white;
         text-align: center;
-        padding: 22px;
-        border-top: 1px solid #ccc;
+        padding: 18px;
         font-size: 14px;
     }
 
     footer a {
-        color: #2c6bed;
+        color: #ffd700;
         text-decoration: none;
         font-weight: bold;
     }
@@ -91,57 +92,63 @@
 
 <body>
 
-<header>
+<div class="top-bar">
+    <strong>IT 4403 Student Website</strong>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Exercises</a>
+        <a href="#">Labs</a>
+        <a href="#">Projects</a>
+    </nav>
+</div>
+
+<div class="hero">
     <h1>Beatriz Barios</h1>
-    <p>Kennesaw State University – Information Technology Student</p>
-    <p>IT 4403: Advanced Web and Mobile Applications</p>
-</header>
+    <p>
+        Student at Kennesaw State University <br>
+        Course: IT 4403 – Advanced Web and Mobile Applications
+    </p>
+</div>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Exercises</a>
-    <a href="#">Projects</a>
-    <a href="#">Labs</a>
-</nav>
+<section>
+    <h2>Purpose of This Website</h2>
+    <p>
+        This website was developed as part of the IT 4403 course to organize and present
+        coursework completed throughout the semester. It will contain exercises, labs,
+        and project materials related to web and mobile application development.
+    </p>
+</section>
 
-<main>
-    <div class="box">
-        <h2>Website Overview</h2>
-        <p>
-            This website serves as a central place to organize and display all coursework
-            completed throughout the IT 4403 semester, including exercises, labs, and projects.
-        </p>
-    </div>
+<section class="alt">
+    <h2>Course Information</h2>
+    <p><strong>Course Name:</strong> Advanced Web and Mobile Applications</p>
+    <p><strong>Course Number:</strong> IT 4403</p>
+    <p><strong>University:</strong> Kennesaw State University</p>
+</section>
 
-    <div class="box">
-        <h2>Class Details</h2>
-        <p><strong>Course:</strong> IT 4403 – Advanced Web and Mobile Applications</p>
-        <p><strong>Institution:</strong> Kennesaw State University</p>
-    </div>
+<section>
+    <h2>Academic Disclaimer</h2>
+    <p>
+        This site is intended solely for educational purposes. All content presented
+        here was created as part of coursework requirements and is not intended for
+        commercial use.
+    </p>
+</section>
 
-    <div class="box">
-        <h2>Academic Notice</h2>
-        <p>
-            This site was created strictly for academic use as part of the IT 4403 course.
-            All materials shown are intended for learning purposes only.
-        </p>
-    </div>
-
-    <div class="box">
-        <h2>Useful Resources</h2>
-        <p>
-            <a href="https://www.ccse.kennesaw.edu/it/" target="_blank">
-                CCSE Information Technology Department
-            </a>
-        </p>
-    </div>
-</main>
+<section class="alt">
+    <h2>Related Resources</h2>
+    <p>
+        For more information about the Information Technology program, visit:
+        <br><br>
+        <a href="https://www.ccse.kennesaw.edu/it/" target="_blank">
+            CCSE Department of Information Technology
+        </a>
+    </p>
+</section>
 
 <footer>
-    <p>&copy; 2026 Beatriz Barios | IT 4403 Student Website</p>
+    © 2026 Beatriz Barios | IT 4403  
 </footer>
 
 </body>
 </html>
-
-
