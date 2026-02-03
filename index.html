@@ -3,55 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <title>IT 4403 Student Website</title>
+
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #ffffff;
+            background-color: #f9f9f9;
             color: #000000;
-            margin: 40px;
         }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #e6e6e6;
+            padding: 10px;
+            text-align: center;
+        }
+
         nav a {
-            margin-right: 15px;
+            margin: 0 15px;
+            text-decoration: none;
+            color: #003366;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
         }
     </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Your Name</h1>
-    <p>Student – CCSE Department of IT</p>
-  </header>
+<header>
+    <h1>Tu Nombre</h1>
+    <p>IT 4403 – Advanced Web and Mobile Applications</p>
+</header>
 
-  <section>
-    <h2>Welcome</h2>
-    <p>
-      This website is created to showcase exercises, labs, and projects
-      developed for the course IT 4403 – Advanced Web and Mobile Applications.
-    </p>
-  </section>
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Exercises</a>
+    <a href="#">Labs</a>
+    <a href="#">Project</a>
+</nav>
 
-  <section>
-    <h2>Navigation</h2>
-    <ul>
-      <li><a href="exercises.html">Exercises</a></li>
-      <li><a href="projects.html">Labs & Projects</a></li>
-    </ul>
-  </section>
+<main>
+    <p>
+        This website is used to publish exercises and projects for the course
+        <strong>IT 4403 – Advanced Web and Mobile Applications</strong>.
+    </p>
 
-  <footer>
     <p>
-      <strong>Course:</strong> IT 4403 – Advanced Web and Mobile Applications
+        <strong>Disclaimer:</strong> This is a student website created for course projects in IT 4403.
     </p>
+</main>
+
+<footer>
     <p>
-      <strong>Disclaimer:</strong> This is a student website created for course
-      projects for IT 4403. All content is for educational purposes only.
+        <a href="https://www.ccse.kennesaw.edu/it/" target="_blank">
+            CCSE Department of IT Website
+        </a>
     </p>
-    <p>
-      <a href="https://www.ccse.edu/it" target="_blank">
-        CCSE Department of IT Website
-      </a>
-    </p>
-  </footer>
+</footer>
 
 </body>
 </html>
+
