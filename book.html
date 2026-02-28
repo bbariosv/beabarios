@@ -22,22 +22,26 @@ $(document).ready(function(){
 
     $.getJSON("data/google-books-book.json", function(data){
 
-        var book = data.volumeInfo;
+        if (data && data.volumeInfo) {
+            var book = data.volumeInfo;
 
-        var content = `
-            <h2>${book.title}</h2>
-            <p><strong>Authors:</strong> ${book.authors}</p>
-            <p><strong>Publisher:</strong> ${book.publisher}</p>
-            <p><strong>Published Date:</strong> ${book.publishedDate}</p>
-            <p><strong>Description:</strong> ${book.description}</p>
-            <img src="${book.imageLinks.thumbnail}">
-        `;
+            var content = `
+                <h2>${book.title || "No Title Available"}</h2>
+                <p><strong>Authors:</strong> ${book.authors ? book.authors.join(", ") : "Unknown Author"}</p>
+                <p><strong>Publisher:</strong> ${book.publisher || "Not Available"}</p>
+                <p><strong>Published Date:</strong> ${book.publishedDate || "N/A"}</p>
+                <p><strong>Description:</strong> ${book.description ? book.description.substring(0, 500) + "..." : "No description."}</p>
+                <img src="${book.imageLinks ? book.imageLinks.thumbnail : 'https://via.placeholder.com/150'}" alt="Book Cover">
+            `;
 
-        $("#book").html(content);
+            $("#book").html(content);
+        } else {
+            
+            $("#book").html("<p style='color:orange;'>JSON has an error or is empty</p>");
+        }
+    })
+    .fail(function() {
+        $("#book").html("<p style='color:red;'>Error.</p>");
     });
-
 });
 </script>
-
-</body>
-</html>
