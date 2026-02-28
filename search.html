@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Search</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        .book-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        img { max-width: 120px; }
+    </style>
+</head>
+
+<body>
+
+<h1>Book Search Results</h1>
+
+<div id="books"></div>
+
+<script>
+$(document).ready(function(){
+
+    $.getJSON("data/google-books-search.json", function(data){
+
+        var books = data.items;
+
+        $.each(books, function(index, item){
+
+            var info = item.volumeInfo;
+
+            var card = `
+                <div class="book-card">
+                    <h2>${info.title}</h2>
+                    <p><strong>Authors:</strong> ${info.authors}</p>
+                    <p>${info.description ? info.description.substring(0,200) + "..." : ""}</p>
+                    <img src="${info.imageLinks ? info.imageLinks.thumbnail : ""}">
+                </div>
+            `;
+
+            $("#books").append(card);
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
