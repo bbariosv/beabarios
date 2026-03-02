@@ -1,17 +1,16 @@
 {
   "kind": "books#volume",
-  "id": "zyTCAlS7fUsC",
+  "id": "uO9_AwAAQBAJ",
   "volumeInfo": {
-    "title": "The Google Story",
-    "authors": ["David A. Vise", "Mark Malseed"],
-    "publisher": "Delta",
-    "publishedDate": "2005-11-15",
-    "description": "An inside look at the creation and growth of Google, the search engine that changed the world.",
-    "pageCount": 432,
+    "title": "La verdad sobre el caso Harry Quebert",
+    "authors": ["Joël Dicker"],
+    "publisher": "Alfaguara",
+    "publishedDate": "2013-06-19",
+    "description": "August 30, 1975: the day fifteen-year-old Nola Kellergan is seen being chased through the woods before disappearing from the small town of Aurora, New Hampshire. Thirty-three years later, Marcus Goldman, a successful young novelist, visits Aurora to stay with his mentor, Harry Quebert, one of the country's most respected writers, only to learn that Harry has been having an affair with Nola.",
+    "pageCount": 672,
     "imageLinks": {
-      "thumbnail": "http://books.google.com/books/content?id=zyTCAlS7fUsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      "thumbnail": "https://m.media-amazon.com/images/I/91UmVvcyK1L._SL1500_.jpg"
     },
-    "infoLink": "http://books.google.com/books?id=zyTCAlS7fUsC"
+    "infoLink": "https://es.wikipedia.org/wiki/La_verdad_sobre_el_caso_Harry_Quebert"
   }
-}
-   
+} 
