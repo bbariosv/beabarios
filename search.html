@@ -32,6 +32,7 @@ $(document).ready(function(){
         $.each(books, function(index, item){
 
             var info = item.volumeInfo;
+            var authors = info.authors ? info.authors.join(", ") : "Unknown Author";
 
             var card = `
                 <div class="book-card">
