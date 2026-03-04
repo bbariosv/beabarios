@@ -40,6 +40,11 @@ $(document).ready(function(){
                     <p><strong>Authors:</strong> ${info.authors}</p>
                     <p>${info.description ? info.description.substring(0,200) + "..." : ""}</p>
                     <img src="${info.imageLinks ? info.imageLinks.thumbnail : ""}">
+                    <p>
+                        <a href="${info.infoLink}" target="_blank">
+                            View More Information (Wikipedia)
+                        </a>
+                    </p>
                 </div>
             `;
 
