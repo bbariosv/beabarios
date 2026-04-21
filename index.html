@@ -1,166 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Beatriz Barios | IT 4403</title>
-
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #eaeaea;
-        color: #111;
-    }
-
-    .container {
-        display: flex;
-        min-height: 100vh;
-    }
-
-    /* LEFT SIDE */
-    .left {
-        width: 35%;
-        background-color: #2f4f73; /* lighter navy blue */
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* vertical center */
-        padding: 40px;
-    }
-
-    .left h1 {
-        font-size: 36px;
-        margin-bottom: 15px;
-    }
-
-    .left p {
-        font-size: 15px;
-        color: #e0e0e0;
-        line-height: 1.6;
-        max-width: 300px;
-    }
-
-    /* RIGHT SIDE */
-    .right {
-        width: 65%;
-        padding: 40px;
-        background-color: #f7f7f7;
-    }
-
-    .card {
-        background-color: white;
-        padding: 20px 25px;
-        margin-bottom: 25px;
-        border-left: 6px solid #2f4f73;
-    }
-
-    .card h2 {
-        margin-top: 0;
-        color: #2f4f73;
-        margin-bottom: 10px;
-    }
-
-    ul {
-        padding-left: 20px;
-        margin: 0;
-    }
-
-    ul li {
-        margin-bottom: 8px;
-    }
-
-    a {
-        color: #2f4f73;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    .footer {
-        margin-top: 40px;
-        font-size: 13px;
-        color: #555;
-    }
-</style>
+    <meta charset="UTF-8">
+    <title>Milestone 4 - Movie SPA</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
+    <header>
+        <h1>CinemaHub</h1>
+        <nav>
+            <button id="show-popular">Populares</button>
+            <button id="show-search">Buscar</button>
+        </nav>
+    </header>
 
-    <!-- LEFT COLUMN -->
-    <div class="left">
-        <h1>Beatriz Barios</h1>
-        <p>
-            Student at Kennesaw State University<br>
-            IT 4403 – Advanced Web and Mobile Applications
-        </p>
-        <p>
-            This website will be used to publish exercises, labs, and project work
-            completed throughout the semester.
-        </p>
-    </div>
+    <main>
+        <section id="search-container" style="display:none;">
+            <input type="text" id="query" placeholder="Busca una película...">
+            <button id="search-btn">🔍</button>
+        </section>
 
-    <!-- RIGHT COLUMN -->
-    <div class="right">
-
-        <div class="card">
-            <h2>Course Information</h2>
-            <p>
-                <strong>Course:</strong> IT 4403<br>
-                <strong>University:</strong> Kennesaw State University
-            </p>
+        <div id="view-controls">
+            <button id="btn-grid">Cuadrícula</button>
+            <button id="btn-list">Lista</button>
         </div>
 
-        <div class="card">
-            <h2>Exercises</h2>
-            <ul>
-                <li>Content will be posted in the future.</li>
-            </ul>
+        <div id="display-area" class="grid-layout">
+            <p>Selecciona una opción para empezar...</p>
         </div>
 
-        <div class="card">
-            <h2>Lab Work</h2>
-            <ul>
-                <li>Content will be posted in the future.</li>
-            </ul>
+        <div id="details-modal" style="display:none;">
+            <button id="close-details">Cerrar</button>
+            <div id="details-content"></div>
         </div>
+    </main>
 
-        <div class="card">
-            <h2>Individual Project Work</h2>
-            <ul>
-                <li><a href="book.html">Milestone 1 - Single Book</a></li>
-                <li><a href="search.html">Milestone 1 - Book Search</a></li>
-            </ul>
+    <script id="movie-card-template" type="x-tmpl-mustache">
+        {{#movies}}
+        <div class="movie-card" data-id="{{id}}">
+            <img src="https://image.tmdb.org/t/p/w200{{poster_path}}" alt="{{title}}">
+            <div class="info">
+                <h3>{{title}}</h3>
+                <p>⭐ {{vote_average}}</p>
+            </div>
         </div>
+        {{/movies}}
+    </script>
 
-        <div class="card">
-            <h2>Disclaimer</h2>
-            <p>
-                This website was created for academic purposes only as part of the
-                IT 4403 course.
-            </p>
-        </div>
-
-        <div class="card">
-            <h2>Useful Link</h2>
-            <p>
-                <a href="https://www.kennesaw.edu/ccse/academics/information-technology/">
-                    CCSE Department of Information Technology
-                </a>
-            </p>
-        </div>
-
-        <div class="footer">
-            © 2026 Beatriz Barios
-        </div>
-
-    </div>
-
-</div>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
